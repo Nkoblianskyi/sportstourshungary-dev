@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Trophy } from 'lucide-react'
+import Image from 'next/image'
 
 export function SiteFooter() {
   return (
@@ -22,9 +22,7 @@ export function SiteFooter() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="bg-accent rounded-md p-1.5">
-                <Trophy className="w-4 h-4 text-accent-foreground" />
-              </span>
+              <Image src="/favicon.ico" alt="SportToursHungary logo" width={32} height={32} />
               <span className="font-display text-lg font-bold">
                 SportTours<span className="text-accent">Hungary</span>
               </span>
