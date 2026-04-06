@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Menu, X, Trophy } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 const NAV_LINKS = [
   { href: '/', label: 'Főoldal' },
@@ -29,9 +30,7 @@ export function SiteHeader() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="bg-accent rounded-md p-1.5">
-              <Trophy className="w-5 h-5 text-accent-foreground" />
-            </span>
+            <Image src="/favicon.ico" alt="SportToursHungary logo" width={32} height={32} />
             <span className="font-display text-xl font-bold text-primary-foreground tracking-tight">
               SportTours<span className="text-accent">Hungary</span>
             </span>
